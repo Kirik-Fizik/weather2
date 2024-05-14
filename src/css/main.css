@@ -1,0 +1,234 @@
+*, 
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: Montserrat;
+}
+@media (max-width: 400px) {
+    * {
+        font-size: .95em;
+    }
+}
+
+body {
+    background-color: rgb(236, 236, 236);
+    padding: 2em 2em;
+}
+@media (max-width: 700px) {
+    body {
+        padding: 2em .5em;
+    }
+}
+@media (max-width: 320px) {
+    body {
+        padding: 1em 0.1em;
+    }
+}
+
+
+.layout-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.layout__input {
+    color: white;
+    background-color: black;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em 3em;
+    border: none;
+    border-radius: 2em;
+    outline: none;
+    margin-right: .5em;
+}
+@media (max-width: 400px) {
+    .layout-wrapper {
+        margin-left: 0.5em;
+        margin-right: 0.5em; 
+    }
+    .layout__input {
+        padding: 1em 1em;
+    }
+}
+.layout__clear {
+    background-color: rgb(175, 175, 175);
+    position: absolute;
+    right: 9em;
+    width: 1em;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 600;
+    padding: .2em;
+}
+@media(max-width: 500px) {
+    .layout__clear {
+        right: 7em;
+    }
+}
+@media (max-width: 400px) {
+    .layout__clear {
+        right: 5em;
+    }
+}
+.layout__clear:hover {
+    cursor: pointer;
+    background-color: rgb(219, 219, 219);
+}
+.layout__button-search {
+    border: none;
+    width: 3em;
+    height: 3em;
+    background-color: rgb(236, 236, 236);
+    border-radius: 50%;
+    transition: .2s;
+}
+.layout__button-search:hover {
+    cursor: pointer;
+}
+.layout__img {
+    width: 2em;
+    height: 2em;
+}
+
+
+.main {
+    margin-top: 2em;
+}
+.main__wrapper {
+    display: flex;
+}
+@media (max-width: 700px) {
+    .main__wrapper {
+        flex-wrap: wrap;
+    }
+}
+.main__block {
+    flex: 3;
+    background-color: black;
+    color: white;
+    margin: .1em;
+    font-size: 1rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+}
+@media (max-width: 364px) {
+    .main__block {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.main__block_left {
+    flex: 4;
+    padding: 5em;
+    align-items: flex-start;
+    line-height: 2;
+    font-weight: 300;
+    background-size: 100% 170%;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+@media (max-width: 510px) {
+    .main__block_left {
+        padding: 3em;
+    }
+}
+.main__block_left_clear {
+    background-image: url('../img/clearsky.jpg');
+}
+.main__block_left_overcastclouds {
+    background-image: url('../img/overcoastclouds.jpg');
+}
+.main__block_left_fewclouds {
+    background-image: url('../img/fewclouds.jpg');
+}
+.main__block_left_brokenclouds {
+    background-image: url('../img/brokenclouds.jpg');
+}
+.main__block_left_weather {
+    background-image: url('../img/weather.jpg');
+}
+.main__block_left_rain {
+    background-image: url('../img/rain.jpg');
+}
+.main__block_left_snow {
+    background-image: url('../img/snow.jpg');
+}
+.main__block_left>div:nth-child(1) {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+.main__block_right {
+    flex: 1;
+    font-size: 3rem;
+    margin-right: 0;
+}
+.main__block_right > div {
+    font-family: Orbitron;
+}
+
+
+.main__details {
+    padding: 1.5em 0 1.5em 1.5em;
+    font-size: 1.2rem;
+}
+.main__details-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+@media (max-width: 700px) {
+    .main__details-wrapper {
+        flex-wrap: wrap;
+    }
+}
+.main__details-wrapper > div {
+    color: white;
+    background-color: black;
+    padding: 3em;
+    margin: .2em;
+    border-radius: 2em;
+    letter-spacing: .06em;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.719);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal__wrapper {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    background-color: rgb(233, 233, 233);
+    padding: 2em;
+    border-radius: 2em;
+}
+.modal__button {
+    display: flex;
+    justify-content: center;
+}
+.modal__button > div {
+    background-color: grey;
+    color: black;
+    border-radius: .1em;
+    padding: .1em .5em;
+    margin-top: 1em;
+}
+.modal__button > div:hover {
+    cursor: pointer;
+    background-color: rgb(95, 95, 95);
+}
