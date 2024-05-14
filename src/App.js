@@ -23,7 +23,7 @@ function App() {
   async function cityAndWeather () {
     try {
       setLoading(true);
-      const koords = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${API_Key}`);
+      const koords = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${API_Key}`);
       const data = await koords.json();
       const lat = data[0].lat;
       const lon = data[0].lon;
@@ -39,7 +39,7 @@ function App() {
 
   React.useEffect(() => {
     const fetchData = async () => {
-      const koords = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=Moscow&limit=5&appid=${API_Key}`);
+      const koords = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=Moscow&limit=5&appid=${API_Key}`);
       const data = await koords.json();
       const lat = data[0].lat;
       const lon = data[0].lon;
